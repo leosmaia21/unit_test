@@ -34,4 +34,4 @@ int	main(int argc, char *argv[])
 ```
 
 ## Result
-![](images/test.png)
+![](images/test2.png)
