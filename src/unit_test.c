@@ -6,7 +6,7 @@
 /*   By: ledos-sa <ledos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 18:01:41 by ledos-sa          #+#    #+#             */
-/*   Updated: 2022/11/27 18:50:00 by ledos-sa         ###   ########.fr       */
+/*   Updated: 2022/11/27 19:00:51 by ledos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,6 @@ void	run_test(void (*f)(void))
 	if (g_total_tests == g_test_passed)
 		printf("\nAll %d tests passed💯\n", g_total_tests);
 	else
-		printf("\nTotal tests:%d, successful tests:%d, failed testes:%d\n", \
+		printf("\nTotal tests:%d, successful tests:%d, failed tests:%d\n", \
 				g_total_tests, g_test_passed, g_test_failed);
 }
