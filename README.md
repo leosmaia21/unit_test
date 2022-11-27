@@ -1,8 +1,8 @@
 # Unit Test
 a simple unit test library, so far only for testing as integers, floats and strings
 
-```
-#include "../unit_test/unit_test.h"
+```c
+#include "../src/unit_test.h"
 
 int	function1(int x)
 {
