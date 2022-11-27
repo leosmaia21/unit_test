@@ -32,3 +32,6 @@ int	main(int argc, char *argv[])
 	return (0);
 }
 ```
+
+## Result
+![](images/test1.png)
