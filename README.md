@@ -21,9 +21,10 @@ char	*function3(char *x)
 
 void	tests(void)
 {
-	unit_test_int(2, function1(1));
-	unit_test_float(1.4, function2(1));
-	unit_test_string("test", function3("test"));
+	unit_test_equal_int(2, function1(1));
+	unit_test_equal_float(1.4, function2(1));
+	unit_test_not_equal_float(1.4, function2(1));
+	unit_test_equal_string("test", function3("test"));
 }
 
 int	main(int argc, char *argv[])
