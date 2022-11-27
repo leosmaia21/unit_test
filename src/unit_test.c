@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unit.c                                             :+:      :+:    :+:   */
+/*   unit_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ledos-sa <ledos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 18:01:41 by ledos-sa          #+#    #+#             */
-/*   Updated: 2022/11/27 18:09:29 by ledos-sa         ###   ########.fr       */
+/*   Updated: 2022/11/27 18:50:00 by ledos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	g_test_failed = 0;
 static int	g_test_passed = 0;
 static int	g_total_tests = 0;
 
-void	unit_test_int(int expected, int received)
+void	unit_test_equal_int(int expected, int received)
 {
 	g_total_tests++;
 	if (expected == received)
@@ -32,7 +32,7 @@ void	unit_test_int(int expected, int received)
 	}
 }
 
-void	unit_test_float(float expected, float received)
+void	unit_test_equal_float(float expected, float received)
 {
 	g_total_tests++;
 	if (expected == received)
@@ -48,7 +48,39 @@ void	unit_test_float(float expected, float received)
 	}
 }
 
-void	unit_test_string(char *expected, char *received)
+void	unit_test_not_equal_int(int expected, int received)
+{
+	g_total_tests++;
+	if (expected != received)
+	{
+		g_test_passed++;
+		printf("Test%d: OK✅\n", g_total_tests);
+	}
+	else
+	{
+		g_test_failed++;
+		printf("Test%d: Failed❌, got equal numbers: %d\n", \
+				g_total_tests, expected);
+	}
+}
+
+void	unit_test_not_equal_float(float expected, float received)
+{
+	g_total_tests++;
+	if (expected != received)
+	{
+		g_test_passed++;
+		printf("Test%d: OK✅\n", g_total_tests);
+	}
+	else
+	{
+		g_test_failed++;
+		printf("Test%d:dFailed❌, got equal numbers: %g\n", \
+				g_total_tests, expected);
+	}
+}
+
+void	unit_test_equal_string(char *expected, char *received)
 {
 	g_total_tests++;
 	if (!strcmp(expected, received))
