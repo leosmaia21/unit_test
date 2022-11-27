@@ -6,7 +6,7 @@
 /*   By: ledos-sa <ledos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 18:01:41 by ledos-sa          #+#    #+#             */
-/*   Updated: 2022/11/27 20:20:07 by ledos-sa         ###   ########.fr       */
+/*   Updated: 2022/11/27 20:31:01 by ledos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,10 @@ void	unit_test_equal_string(char *expected, char *received)
 
 void	run_test(void (*f)(void))
 {
-	printf("Starting tests...\n");
+	g_test_failed = 0;
+	g_test_passed = 0;
+	g_total_tests = 0;
+	printf("Starting tests...🚀\n\n");
 	f();
 	if (g_total_tests == g_test_passed)
 		printf("\nAll %d tests passed💯\n", g_total_tests);
