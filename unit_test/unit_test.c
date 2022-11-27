@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unit.h"
+#include "unit_test.h"
 
 static int	g_test_failed = 0;
 static int	g_test_passed = 0;

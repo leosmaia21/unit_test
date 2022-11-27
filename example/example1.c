@@ -1,23 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unit.h                                             :+:      :+:    :+:   */
+/*   example1.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ledos-sa <ledos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/27 18:06:26 by ledos-sa          #+#    #+#             */
-/*   Updated: 2022/11/27 18:07:48 by ledos-sa         ###   ########.fr       */
+/*   Created: 2022/11/27 18:15:16 by ledos-sa          #+#    #+#             */
+/*   Updated: 2022/11/27 18:20:09 by ledos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UNIT_H
-# define UNIT_H
+#include "../unit_test/unit_test.h"
 
-# include <stdio.h>
-# include <string.h>
+int	function1(int x)
+{
+	return (x + 1);
+}
 
-void	unit_test_int(int expected, int received);
-void	unit_test_float(float expected, float received);
-void	unit_test_string(char *expected, char *received);
-void	run_test(void (*f)(void));
-#endif 
+float	function2(float x)
+{
+	return (x + 1);
+}
+
+char	*function3(char *x)
+{
+	return (x);
+}
+
+void	tests(void)
+{
+	unit_test_int(2, function1(1));
+	unit_test_float(1.4, function2(1));
+	unit_test_string("test", function3("test"));
+}
+
+int	main(int argc, char *argv[])
+{
+	run_test(tests);
+	return (0);
+}
